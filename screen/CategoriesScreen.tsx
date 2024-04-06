@@ -1,12 +1,9 @@
-import { FlatList } from "react-native"
-import CategoryGridTile from "../components/CategoryGridTile"
-import type { NativeStackScreenProps } from "@react-navigation/native-stack"
+import { FlatList } from 'react-native'
+import CategoryGridTile from '../components/CategoryGridTile'
 
-import { CATEGORIES } from "../data/dummy-data"
-import { RootStackParamList } from "../App"
+import { CATEGORIES } from '../data/dummy-data'
 
-type Props = NativeStackScreenProps<RootStackParamList, "MealsCategories">
-
+// type Props = NativeStackScreenProps<RootDrawerParamList, 'Categories'>
 interface RenderItemProps {
   item: {
     title: string
@@ -15,10 +12,10 @@ interface RenderItemProps {
   }
 }
 
-function CategoriesScreen({ navigation }: Props) {
+function CategoriesScreen({ navigation }: any) {
   function renderCategoryItem(itemData: RenderItemProps) {
     const pressHandler = () => {
-      navigation.navigate("MealsOverview", {
+      navigation.navigate('MealsOverview', {
         categoryId: itemData.item.id,
       })
     }

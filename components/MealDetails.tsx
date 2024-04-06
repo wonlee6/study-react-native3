@@ -1,13 +1,12 @@
 import React from 'react'
-import { Platform, StyleProp, StyleSheet, Text, View } from 'react-native'
+import { StyleProp, StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native'
 
 interface Props {
   duration: number
   complexity: string
   affordability: string
-  // style: StyleProp<text>
-  style?: any
-  textStyle?: any
+  style?: StyleProp<ViewStyle>
+  textStyle?: StyleProp<TextStyle>
 }
 
 export default function MealDetails({
